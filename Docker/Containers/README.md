@@ -81,7 +81,7 @@ docker container ls
 docker container ls -a
 ```
 
-Удаляет контейнер, удалит можно как по айди так и по имени ниже на изображении пример
+Удаляет контейнер, удалить можно как по айди так и по имени ниже на изображении пример
  
 ```terminal
 docker container rm $name-container
