@@ -52,7 +52,9 @@ docker -v
 ---
 #### _Установка на Windows_
 _ВАЖНО После установки docker в системе перестанут работать виртуальные машины и эмуляторы андроид!_
+
 _[Скачиваем](https://www.docker.com/products/docker-desktop) десктоп программу и устанавливаем_
+
 ![](https://i.imgur.com/uLLyRsR.png)
 
 _в консоли проверяем версию docker_
@@ -60,6 +62,7 @@ _в консоли проверяем версию docker_
 docker -v
 ```
 _настраиваем шаринг дисков_
+
 ![](https://i.imgur.com/TuyLWUd.png)
 
 [Восстановление виртуализации в Windows](RestoreHyper_V/restoreHiper_v.md)
