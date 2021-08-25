@@ -8,6 +8,8 @@
 
 [Контейнеры в Docker](Containers/README.md)
 
+[Образы в Docker](Images/README.md)
+
 ----
 
 [Вернуться в QA Automation Tools](../README.md)
