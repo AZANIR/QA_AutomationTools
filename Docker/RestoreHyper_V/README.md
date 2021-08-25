@@ -43,3 +43,5 @@ bcdedit /set {GUID} hypervisorlaunchtype off
 ![Меню выбора операционной системы](https://www.white-windows.ru/wp-content/uploads/2018/05/5282160_5.jpg)
 
 Первое будет загружать рабочий стол с включенной Hyper-V, второе — без неё.
+
+[Вернуться в главное меню](../README.md)

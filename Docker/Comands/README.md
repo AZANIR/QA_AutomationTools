@@ -35,3 +35,5 @@ Docker-контейнер (Docker-container) — это легкий, автон
 ```terminal
 docker container --help
 ```
+
+[Вернуться в главное меню](../README.md)
