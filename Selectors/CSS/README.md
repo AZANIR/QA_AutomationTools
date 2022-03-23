@@ -28,9 +28,72 @@
  <dd>Этот селектор выбирает все элементы, имеющие данный атрибут или атрибут с определённым значением.<br>
  <strong>Синтаксис:</strong> <code>[attr] [attr=value] [attr~=value] [attr|=value] [attr^=value] [attr$=value] [attr*=value]</code><br>
  <strong>Пример: </strong>селектор <code>[autoplay]</code>&nbsp;выберет все элементы, у которых есть&nbsp; атрибут <code>autoplay</code>&nbsp;(независимо от его значения).<br>
- <strong>Ещё пример</strong>: a[href$=".jpg"] выберет все ссылки, у которых адрес заканчивается на ".jpg".<br>
- <strong>Ещё пример</strong>: a[href^="https"] выберет все ссылки, у которых адрес начинается на "https".</dd>
-</dl></div><h2 id="комбинаторы"><a href="#комбинаторы" title="Permalink to Комбинаторы">Комбинаторы</a></h2><div><dl>
+
+<strong>На атрибут целиком:</strong>
+
+<code>[attr]</code> – атрибут установлен,
+<code>[attr="val"]</code> – атрибут равен val.<br>
+
+<strong>На начало атрибута:</strong>
+
+<code>[attr^="val"]</code> – атрибут начинается с <code>val</code>, например <code>"value"</code>.
+<code>[attr|="val"]</code> – атрибут равен <code>val</code> или начинается с <code>val-</code>, например равен <code>"val-1"</code>.<br>
+
+<strong>На содержание:</strong>
+
+<code>[attr*="val"]</code> – атрибут содержит подстроку val, например равен "myvalue".
+<code>[attr~="val"]</code> – атрибут содержит val как одно из значений через пробел.
+Например: <code>[attr~="delete"]</code> верно для "edit delete" и неверно для "undelete" или "no-delete".<br>
+
+<strong>На конец атрибута:</strong>
+
+<code>[attr$="val"]</code> – атрибут заканчивается на val, например равен <code>"myval"</code>.</dd>
+
+</dl></div>
+
+<h2 id="отношения"><a href="#отношения" title="Permalink to Отношения">Отношения</a></h2><div><dl>
+ <dt id="по_месту_соседей"><a href="#по_месту_соседей">Фильтр по месту среди соседей</a></dt>
+ <dd><p>При выборе элемента можно указать его место среди соседей.</p>
+<p>Список псевдоклассов для этого:</p>
+<ul>
+<li>
+<p><code>:first-child</code> – первый потомок своего родителя.</p>
+</li>
+<li>
+<p><code>:last-child</code> – последний потомок своего родителя.</p>
+</li>
+<li>
+<p><code>:only-child</code> – единственный потомок своего родителя, соседних элементов нет.</p>
+</li>
+<li>
+<p><code>:nth-child(a)</code> – потомок номер <code>a</code> своего родителя, например <code>:nth-child(2)</code> – второй потомок. Нумерация начинается с <code>1</code>.</p>
+</li>
+<li>
+<p><code>:nth-child(an+b)</code> – расширение предыдущего селектора через указание номера потомка формулой, где <code>a,b</code> – константы, а под <code>n</code> подразумевается любое целое число.</p>
+<p>Этот псевдокласс будет фильтровать все элементы, которые попадают под формулу при каком-либо <code>n</code>. Например:
+-<code>:nth-child(2n)</code> даст элементы номер <code>2</code>, <code>4</code>, <code>6</code>…, то есть чётные.</p>
+<ul>
+<li><code>:nth-child(2n+1)</code> даст элементы номер <code>1</code>, <code>3</code>…, то есть нечётные.</li>
+<li><code>:nth-child(3n+2)</code> даст элементы номер <code>2</code>, <code>5</code>, <code>8</code> и так далее.</li>
+</ul>
+</li>
+</ul><br></dd>
+
+<dt id="по_месту_соседей_с_тегом"><a href="#по_месту_соседей_с_тегом">Фильтр по месту среди соседей с тем же тегом</a></dt>
+ <dd>
+ <p>Есть аналогичные псевдоклассы, которые учитывают не всех соседей, а только с тем же тегом:</p>
+<ul>
+<li><code>:first-of-type</code></li>
+<li><code>:last-of-type</code></li>
+<li><code>:only-of-type</code></li>
+<li><code>:nth-of-type</code></li>
+<li><code>:nth-last-of-type</code></li>
+</ul>
+<p>Они имеют в точности тот же смысл, что и обычные <code>:first-child</code>, <code>:last-child</code> и так далее, но во время подсчёта игнорируют элементы с другими тегами, чем тот, к которому применяется фильтр.</p>
+ <br></dd>
+</dl></div>
+
+<h2 id="комбинаторы"><a href="#комбинаторы" title="Permalink to Комбинаторы">Комбинаторы</a></h2><div><dl>
  <dt id="комбинатор_запятая"><a href="#комбинатор_запятая">Комбинатор запятая</a></dt>
  <dd>Комбинатор <code>,</code> это способ группировки, он выбирает все совпадающие узлы.<br>
  <strong>Синтаксис:</strong> <code style="white-space: nowrap;"><var>A</var>, <var>B</var></code><br>
@@ -57,7 +120,36 @@
  <strong>Пример: </strong><code>a:visited</code> соответствует всем элементам <code>&lt;a&gt;</code> которые имеют статус "посещённые".<br>
  <strong>Ещё пример</strong>: <code>div:hover</code> соответствует элементу, над которым проходит указатель мыши.<br>
  <strong>Ещё пример</strong>: <code>input:focus</code> соответствует полю ввода, которое получило фокус.</dd>
+ <dt id="другие_псевдоклассы"><a href="#другие_псевдоклассы">Другие псевдоклассы</a></dt>
+ <dd>
+<ul>
+<li>
+<p><code>:not(селектор)</code> – все, кроме подходящих под селектор.</p>
+</li>
+<li>
+<p><code>:focus</code> – в фокусе.</p>
+</li>
+<li>
+<p><code>:hover</code> – под мышью.</p>
+</li>
+<li>
+<p><code>:empty</code> – без детей (даже без текстовых).</p>
+</li>
+<li>
+<p><code>:checked</code>, <code>:disabled</code>, <code>:enabled</code> – состояния <code>INPUT</code>.</p>
+</li>
+<li>
+<p><code>:target</code> – этот фильтр сработает для элемента, <code>ID</code> которого совпадает с анкором  <code>#...</code> текущего URL.</p>
+<p>Например, если на странице есть элемент с <code>id="intro"</code>, то правило <code>:target { color: red }</code> подсветит его в том случае, если текущий URL имеет вид <code>http://...#intro</code>.</p>
+</li>
+</ul></dd>
+
  <dt id="псевдоэлементы"><a href="#псевдоэлементы">Псевдоэлементы</a></dt>
  <dd>Знак <code>::</code> позволяет выбрать вещи, которых нет в HTML.<br>
  <strong>Пример:</strong> <code>p::first-line</code> соответствует первой линии абзаца <code>&lt;p&gt;</code>.</dd>
+
+  <dt id="другие_псевдоэлементы"><a href="#другие_псевдоэлементы">Другие псевдоэлементы</a></dt>
+ <dd>
+<p>«Псевдоэлементы» – различные вспомогательные элементы, которые браузер записывает или может записать в документ.</p>
+<p>При помощи <em>псевдоэлементов</em> <code>::before</code> и <code>::after</code> можно добавлять содержимое в начало и конец элемента:</p></dd>
 </dl></div></article>
