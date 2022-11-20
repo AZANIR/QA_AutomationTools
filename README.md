@@ -18,3 +18,9 @@
 ![CSS3-селекторы](https://i.imgur.com/qmaktP2.png)
 
 [CSS3-селекторы](Selectors/CSS/)
+
+# Encoding 
+
+## нотатка для визначення кодування тексту.
+
+[Encoding](Encoding/)
