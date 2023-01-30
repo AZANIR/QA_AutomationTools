@@ -24,3 +24,13 @@
 ## нотатка для визначення кодування тексту.
 
 [Encoding](Encoding/)
+
+
+
+# Terminal
+
+## Cheats for terminal.
+
+![Terminal](https://i.imgur.com/1e6VezR.png)
+
+[Terminal](Cheats/Console/)
