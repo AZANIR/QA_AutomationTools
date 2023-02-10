@@ -34,3 +34,12 @@
 ![Terminal](https://i.imgur.com/1e6VezR.png)
 
 [Terminal](Cheats/Console/)
+
+
+# Helpers Al
+
+## Cheats for Ai helpers.
+
+![HelperAi](https://i.imgur.com/95xn0N8.png)
+
+[HelperAi](Cheats/HelperAi/)
