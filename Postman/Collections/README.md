@@ -36,9 +36,9 @@ collection. Refer following for the same:
 
 Refer below GIFs to export the collection and get the collection URL:
 
-![Exporting Collection](https://miro.medium.com/v2/resize:fit:640/1*aRqQYQH5mUc9VdaR2BLLkQ.gif)
+![Exporting Collection](https://github.com/AZANIR/QA_AutomationTools/assets/29773018/18212289-3d43-40ac-a6a1-e5a4f8151e27)
 
-![Getting Collection URL](https://miro.medium.com/v2/resize:fit:640/1*l-I_UpBRTi-10DItq6wuIA.gif)
+![Getting Collection URL](https://github.com/AZANIR/QA_AutomationTools/assets/29773018/1ee52151-a85b-4b9a-a498-6f904f1ffbdc)
 
 
 ## Newman Usage
@@ -76,7 +76,8 @@ newman run https://www.postman.com/collections/cb208e7e64056f5294e5  -e environm
 ```
 Refer below GIF to export the environment:
 
-![Exporting Environment](https://miro.medium.com/v2/resize:fit:640/1*YehkX3pHxpACoYVYi7dWcw.gif)
+![Exporting Environment](https://github.com/AZANIR/QA_AutomationTools/assets/29773018/6365f97b-59fd-4234-881b-02fb01f75513)
+
 
 Refer more options at [learn postman](https://learning.postman.com/docs/running-collections/using-newman-cli/command-line-integration-with-newman/)
 
