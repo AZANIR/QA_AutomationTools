@@ -131,5 +131,5 @@ Note: Report will generate under newman/report.html.
 
 Refer below GIF to configure the whole Jenkins job.
 
-[![Jenkins Job Setup](https://i.imgur.com/lhZMMK2.png)](https://youtu.be/Xd_HrGezoug)
+[![Jenkins Job Setup](https://i.imgur.com/lhZMMK2.png)](https://www.youtube.com/watch?v=Xd_HrGezoug)
 
