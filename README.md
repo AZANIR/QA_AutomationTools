@@ -46,8 +46,10 @@
 
 # Documentation
 
-## Tests
+
 [Tests](Documentation/Tests/)
+
+[TypeScript best practices](Documentation/TypeScript/)
 
 ## CrossEnv
 
