@@ -36,4 +36,29 @@ Docker-контейнер (Docker-container) — это легкий, автон
 docker container --help
 ```
 
+Нотатки по docker Container
+```terminal
+// почистити кеш докера
+docker kill $(docker ps -q)
+docker rmi $(docker images -a --filter=dangling=true -q)
+docker rm $(docker ps --filter=status=exited --filter=status=created -q)
+docker rmi $(docker images -a -q)
+docker volume rm $(docker volume ls)
+docker system prune
+
+// копіювати файл з локальної машини на контейнер
+docker cp /path/to/local/file.txt my_container:/path/in/container/file.txt
+
+// копіювати файл (або теку) з контейнеру на вашу локальну машину
+docker cp my_container:/path/in/container/file.txt /path/to/local/file.txt
+
+// запустити командну стрічку на контейнері
+docker exec -it my_container bash
+
+// подитивитись логи контейнеру
+docker logs --follow container_name
+```
+
+
+
 [Вернуться в главное меню](../README.md)
