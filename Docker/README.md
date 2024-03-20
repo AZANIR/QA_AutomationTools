@@ -10,6 +10,8 @@
 
 [Образы в Docker](Images/README.md)
 
+[Docker Cheat Sheet](CheatSheet/README.md)
+
 ----
 
 [Вернуться в QA Automation Tools](../README.md)
