@@ -51,6 +51,8 @@
 
 [TypeScript best practices](Documentation/TypeScript/)
 
+[Naming Convention](Documentation/NamingConvention/)
+
 ## CrossEnv
 
 [CrossEnv](Documentation/CrossEnv/)
